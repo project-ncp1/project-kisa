@@ -1,0 +1,9 @@
+===KISA U-07 계정관리 취약점 진단 시작===
+대상 시스템: localhost.localdomain | 2026. 01. 05. (월) 15:33:51 KST
+U-07-01: 루트 계정 확인 중...
+FAIL: 루트 활성화
+======/etc/shadow의 root계정 활성화/비활성화 및 etc/shadow 파일 유무 진단 완료! project-kisa-20260105-153351.txt======
+U-08: /etc/shadow 소유자/권한 확인 중...
+PASS:macOS환경 (/etc/shadow 없음)
+====== /etc/shadow 소유자 및 권한 확인 완료! project-kisa-20260105-153351.txt ======
+====== /etc/hosts 소유자/권한  진단 완료! project-kisa-20260105-153351.txt======

@@ -1,0 +1,283 @@
+# 이 viminfo 파일은 빔이 만든 것입니다 Vim 8.2.
+# 조심만 한다면 고칠 수도 있습니다!
+
+# Viminfo version
+|1,4
+
+# 이 파일이 저장되었을 때의 'encoding'의 값
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~H
+# 명령 행 히스토리 (새것부터 오래된 것 순):
+:q
+|2,0,1766817391,,"q"
+:q!
+|2,0,1766817350,,"q!"
+
+# 찾을 문자열 히스토리 (새것부터 오래된 것 순):
+
+# 표현 히스토리 (새것부터 오래된 것 순):
+
+# 입력 행 히스토리 (새것부터 오래된 것 순):
+
+# 디버그 행 히스토리 (새것부터 오래된 것 순):
+
+# 레지스터:
+
+# 파일 마크:
+'0  1  0  /etc/sshd_config
+|4,48,1,0,1766836967,"/etc/sshd_config"
+'1  1  0  /etc/ssh/sshd_config
+|4,49,1,0,1766836949,"/etc/ssh/sshd_config"
+'2  32  2  /etc/security/faillock.conf
+|4,50,32,2,1766817391,"/etc/security/faillock.conf"
+'3  1  0  /etc/sshd_config
+|4,51,1,0,1766836967,"/etc/sshd_config"
+'4  1  0  /etc/sshd_config
+|4,52,1,0,1766836967,"/etc/sshd_config"
+'5  1  0  /etc/sshd_config
+|4,53,1,0,1766836967,"/etc/sshd_config"
+'6  1  0  /etc/sshd_config
+|4,54,1,0,1766836967,"/etc/sshd_config"
+'7  1  0  /etc/sshd_config
+|4,55,1,0,1766836967,"/etc/sshd_config"
+'8  1  0  /etc/sshd_config
+|4,56,1,0,1766836967,"/etc/sshd_config"
+'9  1  0  /etc/sshd_config
+|4,57,1,0,1766836967,"/etc/sshd_config"
+
+# 점프목록 (새것이 먼저):
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  32  2  /etc/security/faillock.conf
+|4,39,32,2,1766817391,"/etc/security/faillock.conf"
+-'  1  0  /etc/security/faillock.conf
+|4,39,1,0,1766817366,"/etc/security/faillock.conf"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/sshd_config
+|4,39,1,0,1766836967,"/etc/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+-'  1  0  /etc/ssh/sshd_config
+|4,39,1,0,1766836949,"/etc/ssh/sshd_config"
+
+# 파일내의 마크 히스토리 (새것부터 오래된 순):
+
+> /etc/security/pwquality.conf
+	*	1766844194	0
+	"	1	0
+
+> /etc/sshd_config
+	*	1766836964	0
+	"	1	0
+
+> /etc/security/faillock.conf
+	*	1766817390	0
+	"	32	2
+	^	32	3
+
+> /etc/security/fillock.conf
+	*	1766817348	0
+	"	1	0
+
+> /etc/pam.d/sshd
+	*	1766816991	0
+	"	3	32
+	^	3	33
+
+> /etc/pam.d/password-auth
+	*	1766816943	0
+	"	1	0
+
+> /etc/pam.d/system-auth
+	*	1766816624	0
+	"	1	0

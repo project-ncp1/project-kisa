@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="ibus-setup-hangul.desktop" score="2" last-seen="1767575029"/>
+    <application id="gnome-control-center.desktop" score="14" last-seen="1767575031"/>
+    <application id="org.gnome.Terminal.desktop" score="57306" last-seen="1767574916"/>
+    <application id="gkbd-keyboard-display.desktop" score="0" last-seen="1767575016"/>
+  </context>
+</application-state>
