@@ -25,7 +25,7 @@ echo "대상 시스템: $(hostname) | $(date)" >> "$REPORT"
 check_root_login() {
 	echo "U-07-01: 루트 계정 확인 중..." | tee -a "$REPORT"
 
-	if [[ "$OSTPYE" == "darwin*" ]]; then
+	if [[ "$OSTPYE"=="darwin*" ]]; then
 		echo "PASS: macOS 루트 정상" | tee -a "$REPORT"
 	else
 		if [ -f /etc/shadow ]; then
