@@ -25,7 +25,7 @@ echo "대상 시스템: $(hostname) | $(date)" >> "$REPORT"
 check_root_login() {
 	echo "U-07-01: 루트 계정 확인 중..." | tee -a "$REPORT"
 
-	if [[ "$OSTYPE" == "darwin*" ]]; then
+	if [[ "$OSTYPE"=="darwin*" ]]; then
 		echo "PASS: macOS 루트 정상" | tee -a "$REPORT"
 	else
 		if [ -f /etc/shadow ]; then
@@ -45,7 +45,7 @@ echo "======/etc/shadow의 root계정 활성화/비활성화 및 etc/shadow 파�
 
 check_shadow_perm() {
 	echo "U-08: /etc/shadow 소유자/권한 확인 중..." | tee -a "$REPORT"
-	if [[ "$OSTYPE" == "darwin*" ]];then
+	if [[ "$OSTYPE"=="darwin*" ]];then
 		echo "PASS:macOS환경 (/etc/shadow 없음)" | tee -a "$REPORT"
 		return
 	fi
