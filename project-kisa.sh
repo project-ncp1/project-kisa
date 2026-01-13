@@ -80,7 +80,7 @@ check_hosts_perm(){
 	local OWNER=$(ls -l "$FILE" | awk '{print$3}')
 	local MODE=$(stat -c %a "$FILE" 2>/dev/null || stat -f %Lp "$FILE" 2>/dev/null | cut -c5 || echo "999")
 
-	if [ "$OWNER" = "root" ] && [ "$MODE" -le 600 ]2>/dev/null; then
+	if [ "$OWNER" = "root" ] && [ "$MODE" -le 600 ] 2>/dev/null; then
 		echo "PASS:소유자root, 권한 $MODE (600이하)"
 	else
 		echo "실패:소유자 $OWNER, 권한 $MODE -root/600 수정 필요"
