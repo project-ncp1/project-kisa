@@ -3,7 +3,7 @@ export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH
 #KISA UNIX 취약점 자동 스캐너 v1.0(U-07계정관리)
 #작성자 : Kimjoon-Yeong(정보 보안 엔지니어 준비생)
 
-.function.sh 
+. function.sh 
 LS_MAC=false
 TARGET_FILE="$1"
 if [[ $# -eq 0 ]];then
