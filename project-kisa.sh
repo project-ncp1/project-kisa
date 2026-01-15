@@ -2,6 +2,8 @@
 export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH
 #KISA UNIX 취약점 자동 스캐너 v1.0(U-07계정관리)
 #작성자 : Kimjoon-Yeong(정보 보안 엔지니어 준비생)
+
+. function.sh
 LS_MAC=false
 TARGET_FILE="$1"
 if [[ $# -eq 0 ]];then
@@ -115,3 +117,30 @@ echo "============================U-10 진단 완료! $REPORT===================
 
 
 
+echo "============================U-15 진단 시작! $REPORT================================" | tee -a "$REPORT"
+
+BAR
+CODE "[U-15]World Writable 파일 점검"
+
+cat << EOF >> "$REPORT"
+[양호]:시스템 중요 파일에 world writable 파일이 존재하지 않거나, 존재 시 설정 이유를 확인하고 있는 경우
+[취약]:시스템 중요 파일에 world writable 파일이 존재하나 해당 설정 이유를 확인하고 있지 않은 경우
+EOF
+
+BAR
+
+WW_FILES=$(find / -xdev -type f -perm -002 2>/dev/null | grep -vE "/tmp/|proc/|/dev/|sys/" | head -20)
+
+if [ -z "$WW_FILES" ]; then
+	OK "시스템에 불필요한 world writable 파일이 없습니다."
+else
+	WARN "World writable 파일 존재(목록 확인 필요)"
+	echo "취약 파일 목록:" | tee -a "$REPORT"
+	echo "$WW_FILES" | while read file; do
+		if [ -f "$file"]; then
+			PERM=$(stat -c %A "$file" 2>/dev/null || stat -f %A "$file" 2>/dev/null)
+			OWNER=$(stat -c %U "$file" 2>/dev/null || stat -f %Su "$file" 2>/dev/null)
+			echo "$file (권한: $PERM, 소유자: $OWNER)" | tee a- "$REPORT"
+		fi
+	done
+fi
