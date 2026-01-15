@@ -137,10 +137,12 @@ else
 	WARN "World writable 파일 존재(목록 확인 필요)"
 	echo "취약 파일 목록:" | tee -a "$REPORT"
 	echo "$WW_FILES" | while read file; do
-		if [ -f "$file"]; then
+		if [ -f "$file" ]; then
 			PERM=$(stat -c %A "$file" 2>/dev/null || stat -f %A "$file" 2>/dev/null)
 			OWNER=$(stat -c %U "$file" 2>/dev/null || stat -f %Su "$file" 2>/dev/null)
 			echo "$file (권한: $PERM, 소유자: $OWNER)" | tee a- "$REPORT"
 		fi
 	done
 fi
+
+echo "=============================== U-15 진단 완료! $REPORT==================================" | tee -a "$REPORT"
