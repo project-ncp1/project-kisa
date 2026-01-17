@@ -170,7 +170,7 @@ check_u_20_anon_ftp() {
 VSFTPD_CONF="/etc/vsftpd.conf /etc/vsftpd/vsftpd.conf"
 VULN_VSFTPD=0
 for conf in $VSFTPD_CONF; do
-	if[ -f "$conf" ]; then
+	if [ -f "$conf" ]; then
 		ANON_SETTING=$(grep '^anonymous_enable' "$conf" 2>/dev/null | grep -i 'YES' || echo "NO")
 		if echo "$ANON_SETTING" | grep -q 'YES'; then
 			WARN "취약: $conf 에 anonymous_enable=YES -> NO로 변경 필요" | tee -a "$REPORT"
@@ -202,4 +202,6 @@ else
 fi
 
 echo >> "$REPORT"
+
+echo "======================================U-20 진단 끝!=======================================
 }
