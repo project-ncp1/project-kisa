@@ -180,6 +180,8 @@ for conf in $VSFTPD_CONF; do
 		else
 			OK "양호: $conf anonymous_enable 비활성 또는 NO" | tee -a "$REPORT"
 		fi
+	else
+		INFO "$conf 파일  없음 (FTP 서버 미설치 = 양호)" | tee -a "$REPORT"
 	fi
 done
 
