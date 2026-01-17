@@ -45,6 +45,7 @@ check_root_login() {
 check_root_login
 echo "======/etc/shadow의 root계정 활성화/비활성화 및 etc/shadow 파일 유무 진단 완료! $REPORT======" | tee -a "$REPORT"
 
+#쉐도우 파일 점검
 check_shadow_perm() {
 	echo "U-08: /etc/shadow 소유자/권한 확인 중..." | tee -a "$REPORT"
 	if [[ "$OSTYPE"=="darwin*" ]];then
@@ -70,6 +71,7 @@ check_shadow_perm() {
 check_shadow_perm
 echo "====== /etc/shadow 소유자 및 권한 확인 완료! $REPORT ======" | tee -a "$REPORT"
 
+# 호스트 점검
 check_hosts_perm(){
 	local FILE=${1:-"/etc/hosts"}
 	echo "/etc/hosts 소유자/권한 확인 중...($FILE)"
@@ -92,6 +94,7 @@ check_hosts_perm(){
 check_hosts_perm
 echo "====== /etc/hosts 소유자/권한  진단 완료! $REPORT======" | tee -a "$REPORT"
 
+#그룹 점검
 check_group_perm(){ 
 	FILE_GROUP=$(ls -l "$TARGET_FILE" | awk '{print $4}')
 
@@ -118,7 +121,7 @@ echo "============================U-10 진단 완료! $REPORT===================
 
 
 echo "============================U-15 진단 시작! $REPORT================================" | tee -a "$REPORT"
-
+# World Writable 파일 점검
 BAR
 CODE "[U-15]World Writable 파일 점검"
 
@@ -146,3 +149,57 @@ else
 fi
 
 echo "=============================== U-15 진단 완료! $REPORT==================================" | tee -a "$REPORT"
+
+
+echo "=============================== U-20 진단 시작! $REPORT==================================" | tee -a "$REPORT"
+
+check_u_20_anon_ftp() {
+	CODE "[U-20] Anonymous FTP 비활성화"
+
+	echo "[U-20] Anonymous FTP 비활성화 점검 결과" >> "$REPORT"
+#1. /etc/passwd에 ftp/annoymous 계정 체크
+	FTP_USER=$(grep -i '^ftp\|^anonymous' /etc/passwd 2>dev/null)
+	if [ -n "$FTP_USER" ]; then
+		WARN "취약: /etc/passwd에 ftp/anonymous 계정 존재 -> userdel ftp/anonymous 필요" | tee -a "$REPORT"
+		VULN_COUNT=1
+	else
+		OK "양호: ftp/anonymous 계정 없음" | tee -a "$REPORT"
+	fi
+
+#2. vsftpd.conf 체크 (anonymous_enable=NO 여부)
+VSFTPD_CONF="/etc/vsftpd.conf /etc/vsftpd/vsftpd.conf"
+VULN_VSFTPD=0
+for conf in $VSFTPD_CONF; do
+	if[ -f "$conf" ]; then
+		ANON_SETTING=$(grep '^anonymous_enable' "$conf" 2>/dev/null | grep -i 'YES' || echo "NO")
+		if echo "$ANON_SETTING" | grep -q 'YES'; then
+			WARN "취약: $conf 에 anonymous_enable=YES -> NO로 변경 필요" | tee -a "$REPORT"
+			VULN_VSFTPD=1
+		else
+			OK "양호: $conf anonymous_enable 비활성 또는 NO" | tee -a "$REPORT"
+		fi
+	fi
+done
+
+#3. proftpd.conf 체크 (Anonymous 섹션 존재 여부)
+PROFTPD_CONF="/etc/proftpd.conf"
+if [ -f "$PROFTPD_CONF" ]; then
+	ANON_SECTION=$(grep -i '<Anonymous' "$PROFTPD_CONF" 2>/dev/null)
+	if [ -n "$ANON_SECTION" ]; then
+		WARN "취약: $PROFTPD_CONF에 <Anonymous> 섹션 존재 -> 주석 처리 필요" | tee -a "$REPORT"
+	else
+		OK "양호: $PROFTPD_CONF Anonymous 섹션 없음 또는 주석" | tee -a "$REPORT"
+	fi
+fi
+
+#4. FTP 서비스 실행 여부 간단 체크 (ps로 ftp 프로세스)
+FTP_RUNNING=$(ps aux 2>/dev/null | grep -E '(vsftpd|proftpd|ftpd)' | grep -v grep)
+if [ -n "$FTP_RUNNING" ]; then
+	INFO "FTP 서비스 실행 중: $FTP_RUNNING - 수동으로 anonymous 테스트 권장 (ftp localhost, anonymous 로그인
+	시도)" | tee -a "$REPORT"
+else
+	OK "양호 : FTP 서비스 미실행" | tee -a "$REPORT"
+fi
+
+echo >> "$REPORT"
+}
