@@ -157,8 +157,8 @@ check_u_20_anon_ftp() {
 	CODE "[U-20] Anonymous FTP 비활성화"
 
 	echo "[U-20] Anonymous FTP 비활성화 점검 결과" >> "$REPORT"
-#1. /etc/passwd에 ftp/annoymous 계정 체크
-	FTP_USER=$(grep -i '^ftp\|^anonymous' /etc/passwd 2>dev/null)
+#1. /etc/passwd에 ftp/anoymous 계정 체크
+	FTP_USER=$(grep -i '^ftp\|^anonymous' /etc/passwd 2>/dev/null)
 	if [ -n "$FTP_USER" ]; then
 		WARN "취약: /etc/passwd에 ftp/anonymous 계정 존재 -> userdel ftp/anonymous 필요" | tee -a "$REPORT"
 		VULN_COUNT=1
