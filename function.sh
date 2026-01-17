@@ -24,5 +24,9 @@ OK() {
 }
 
 WARN() {
-	echo -e "${YELLO}[WARN] $1${NC}" | tee -a "$REPORT"
+	echo -e "${YELLOW}[WARN] $1${NC}" | tee -a "$REPORT"
+}
+
+INFO() {
+	echo -e "${YELLOW}[INFO] $1${NC}" | tee -a "$REPORT"
 }
