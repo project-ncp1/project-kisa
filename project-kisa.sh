@@ -155,7 +155,9 @@ echo "=============================== U-20 진단 시작! $REPORT===============
 
 check_u_20_anon_ftp() {
 	CODE "[U-20] Anonymous FTP 비활성화"
-
+	VULN_COUNT=0
+	VULN_VSFTPD=0
+	
 	echo "[U-20] Anonymous FTP 비활성화 점검 결과" >> "$REPORT"
 #1. /etc/passwd에 ftp/anoymous 계정 체크
 	FTP_USER=$(grep -i '^ftp\|^anonymous' /etc/passwd 2>/dev/null)
@@ -203,5 +205,6 @@ fi
 
 echo >> "$REPORT"
 }
+check_u_20_anon_ftp
 
 echo "======================================U-20 진단 끝!======================================="
