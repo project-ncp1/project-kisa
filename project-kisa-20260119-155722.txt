@@ -1,0 +1,13 @@
+/System/Volumes/Data/Users/gimjun-yeong/Library/Containers/com.apple.Home.HomeEnergyWidgets/Data/SystemData/com.apple.chrono/placeholders/UtilityRateInfoWidget/systemSmall----164.00w--164.00h--20.00r--0f--0.00t-0.00l-0.00b0.00t.chrono-timeline (권한: 666, 소유자: gimjun-yeong)
+=============================== U-15 진단 완료! project-kisa-20260119-155722.txt==================================
+=============================== U-20 진단 시작! project-kisa-20260119-155722.txt==================================
+[U-20] Anonymous FTP 비활성화 점검 결과
+[0;32m[OK] 양호: ftp/anonymous 계정 없음[0m
+[0;32m[OK] 양호: ftp/anonymous 계정 없음[0m
+[1;33m[INFO] /etc/vsftpd.conf 파일  없음 (FTP 서버 미설치 = 양호)[0m
+[1;33m[INFO] /etc/vsftpd.conf 파일  없음 (FTP 서버 미설치 = 양호)[0m
+[1;33m[INFO] /etc/vsftpd/vsftpd.conf 파일  없음 (FTP 서버 미설치 = 양호)[0m
+[1;33m[INFO] /etc/vsftpd/vsftpd.conf 파일  없음 (FTP 서버 미설치 = 양호)[0m
+[0;32m[OK] 양호 : FTP 서비스 미실행[0m
+[0;32m[OK] 양호 : FTP 서비스 미실행[0m
+
