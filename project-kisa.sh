@@ -61,7 +61,7 @@ check_shadow_perm() {
 	OWNER=$(stat -c "%U" /etc/shadow)
 	MODE=$(stat -c "%a" /etc/shadow)
 
-	if [ "$OWNER" = "root" ] && [ "MODE" -le 400 ]; then
+	if [ "$OWNER" = "root" ] && [ "$MODE" -le 400 ]; then
 		echo "PASS:소유자 root, 권한 ${MODE} (400이하)" | tee -a "$REPORT"
 	else
 		echo "실패:소유자 ${OWNER}, 권한 ${MODE}" | tee -a "$REPORT"
